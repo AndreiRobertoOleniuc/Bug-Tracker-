@@ -16,17 +16,32 @@ import javafx.fxml.Initializable;
  * @author Andrei Oleniuc
  */
 public class ViewLogin implements Initializable {
-    private Main main;
-    /**
-     * Initializes the controller class.
-     */
+    private ViewModelLogin vm;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-
-    public void setMainApp(Main main) {
-        this.main = main;
+    public void bind(){
+        
     }
+    public void setVm(ViewModelLogin vm) {
+        this.vm = vm;
+    }
+
+// Password vergleich Logik
+//    Map<String, Talent> map = new HashMap<String, Talent>();
+//
+//for(Talent t : ListA)
+//{
+//    t.put(t.id, t);
+//}
+//
+//for(Talent t : ListB)
+//{
+//    if(map.containsKey(t.id))
+//    {
+//        t.isSelected = true;
+//    }
+//} 
     
 }

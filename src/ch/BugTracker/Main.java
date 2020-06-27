@@ -5,7 +5,9 @@
  */
 package ch.BugTracker;
 
+import ch.BugTracker.Login.ModelLogin;
 import ch.BugTracker.Login.ViewLogin;
+import ch.BugTracker.Login.ViewModelLogin;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -23,12 +25,19 @@ public class Main extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("Login/ViewLogin.fxml"));
         Parent root;
         root = loader.load();
+
         ViewLogin view = loader.getController();
+        ModelLogin model = new ModelLogin();
+        model.setMainApp(this);
+        final ViewModelLogin viewModel = new ViewModelLogin(model);
+        view.setVm(viewModel);
+        model.addPropertyChangeListener(viewModel);
 
-        this.stage = stage;
-        view.setMainApp(this);
+        view.bind();
+
         final Scene scene = new Scene(root);
-
+        this.stage = stage;
+        stage.setTitle("Login");
         stage.setScene(scene);
         stage.show();
     }

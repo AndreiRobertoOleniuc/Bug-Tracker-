@@ -27,5 +27,7 @@ public class Commands {
             System.out.println("Email: " + rs.getString(4));
             System.out.println("Password: " + rs.getString(5));
         }
+        conn.close();
+        jdbc.closeConnection();
     }
 }

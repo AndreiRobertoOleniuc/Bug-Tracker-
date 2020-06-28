@@ -5,8 +5,10 @@
  */
 package ch.BugTracker.Login;
 
+import ch.BugTracker.Database.Commands;
 import ch.BugTracker.Main;
 import java.net.URL;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 
@@ -17,6 +19,7 @@ import javafx.fxml.Initializable;
  */
 public class ViewLogin implements Initializable {
     private ViewModelLogin vm;
+    private Commands sql = new Commands();
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -24,8 +27,9 @@ public class ViewLogin implements Initializable {
     public void bind(){
         
     }
-    public void setVm(ViewModelLogin vm) {
+    public void setVm(ViewModelLogin vm) throws SQLException, ClassNotFoundException {
         this.vm = vm;
+        sql.selectAll();
     }
 
 // Password vergleich Logik

@@ -19,7 +19,6 @@ import javafx.fxml.Initializable;
  */
 public class ViewLogin implements Initializable {
     private ViewModelLogin vm;
-    private Commands sql = new Commands();
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -29,7 +28,6 @@ public class ViewLogin implements Initializable {
     }
     public void setVm(ViewModelLogin vm) throws SQLException, ClassNotFoundException {
         this.vm = vm;
-        sql.selectAll();
     }
 
 // Password vergleich Logik

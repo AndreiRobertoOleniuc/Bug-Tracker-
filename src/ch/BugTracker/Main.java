@@ -5,6 +5,7 @@
  */
 package ch.BugTracker;
 
+import ch.BugTracker.Database.Commands;
 import ch.BugTracker.Login.ModelLogin;
 import ch.BugTracker.Login.ViewLogin;
 import ch.BugTracker.Login.ViewModelLogin;

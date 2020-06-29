@@ -5,6 +5,8 @@
  */
 package ch.BugTracker.Database;
 
+import java.sql.SQLException;
+
 /**
  *
  * @author Andrei Oleniuc
@@ -15,9 +17,8 @@ public class Users {
     private String surname;
     private String email;
     private String password;
-
     
-    public Users(int idUser, String prename, String surname, String email, String password) {
+    public Users(int idUser, String prename, String surname, String email, String password) throws SQLException, ClassNotFoundException {
         this.idUser = idUser;
         this.prename = prename;
         this.surname = surname;

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>700</x>
+      <y>350</y>
+      <w>390</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+Bugs
+--
+&lt;&lt;PK&gt;&gt; idBug: int auto
+name: varchar not null
+status: enum("offen", "in bearbeitung", "beendet") not null
+datum: date not null
+programmiersprache : enum("java","python","javascript",
+"html","css","c#") not null
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>70</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+Verwaltung
+--
+&lt;&lt;PK&gt;&gt; idUsersZuBugs: int auto
+&lt;&lt;FK&gt;&gt; idUser: int not null
+&lt;&lt;FK&gt;&gt; idBug: int not null
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>40</x>
+      <y>340</y>
+      <w>210</w>
+      <h>190</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;table&gt;&gt;
+User
+--
+&lt;&lt;PK&gt;&gt; idUser: int auto
+prename: varchar not null
+surname: varchar not null
+email: varchar not null
+password: varchar not null
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>180</x>
+      <y>160</y>
+      <w>220</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+m2=1</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>160</y>
+      <w>210</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=0..n
+m2= 1</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;190.0</additional_attributes>
+  </element>
+</diagram>

@@ -32,6 +32,5 @@ public class ModelLogin {
         sql.updateAdministration();
         sql.updateBugs();
         sql.updateData();
-        sql.updateUser(1, "1234");
     }    
 }

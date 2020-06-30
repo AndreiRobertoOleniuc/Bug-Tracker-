@@ -101,5 +101,15 @@ public class Commands {
             jdbc.closeConnection();
         }
     }
+    public boolean checkLogin(String email,String password){
+        for(int i = 0; i<allUser.size();i++){
+            if(email.equals(allUser.get(i).getEmail())){
+                if(password.equals(allUser.get(i).getPassword())){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
 }

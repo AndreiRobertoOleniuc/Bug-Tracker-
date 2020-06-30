@@ -10,6 +10,7 @@ import ch.BugTracker.Main;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 /**
  *
@@ -32,5 +33,9 @@ public class ModelLogin {
         sql.updateAdministration();
         sql.updateBugs();
         sql.updateData();
+        Scanner in = new Scanner(System.in);
+        String email = in.nextLine();
+        String password = in.nextLine();
+        sql.checkLogin(email, password);
     }    
 }

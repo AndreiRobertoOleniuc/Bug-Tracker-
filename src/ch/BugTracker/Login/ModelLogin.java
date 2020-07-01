@@ -20,6 +20,7 @@ public class ModelLogin {
     protected final PropertyChangeSupport changes = new PropertyChangeSupport(this);
     private Main mainApp;    
     private final Commands sql;
+    boolean old= false;
 
     public ModelLogin() throws SQLException, ClassNotFoundException {
         sql = new Commands();
@@ -35,8 +36,12 @@ public class ModelLogin {
         sql.updateData();
     }
 
-    public boolean checkLogin(String email,String password){
+    public void checkLogin(String email,String password){
         boolean check = sql.checkLogin(email, password);
-        return check;
+        changes.firePropertyChange("check", old, check);
+    }
+
+    public void startBugtracker() {
+        mainApp.startBugTracker();
     }
 }

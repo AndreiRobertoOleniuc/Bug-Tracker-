@@ -83,7 +83,7 @@ public class ViewLogin implements Initializable {
             if (check.getValue() == true) {
                 vm.startBugTracker();
             } else {
-                System.out.println("Bitte geben sie es richtig ein");
+                JOptionPane.showMessageDialog(null,"Ihre anmeldedaten sind falsch", "Fehler", JOptionPane.ERROR_MESSAGE);
             }
         }
     }

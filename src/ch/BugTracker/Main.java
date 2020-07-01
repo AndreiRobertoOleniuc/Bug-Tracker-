@@ -9,6 +9,11 @@ import ch.BugTracker.Database.Commands;
 import ch.BugTracker.Login.ModelLogin;
 import ch.BugTracker.Login.ViewLogin;
 import ch.BugTracker.Login.ViewModelLogin;
+import ch.BugTracker.UI.ModelUI;
+import ch.BugTracker.UI.ViewModelUI;
+import ch.BugTracker.UI.ViewUI;
+import java.io.IOException;
+import java.sql.SQLException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -50,8 +55,24 @@ public class Main extends Application {
         launch(args);
     }
 
-    public void startBugTracker() {
-        
+    public void startBugTracker() throws IOException, SQLException, ClassNotFoundException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("UI/ViewUI.fxml"));
+        Parent root;
+        root = loader.load();
+
+        ViewUI view = loader.getController();
+        ModelUI model = new ModelUI();
+        model.setMain(this);
+        final ViewModelUI viewModel = new ViewModelUI(model);
+        view.setViewModel(viewModel);
+        model.addPropertyChangeListener(viewModel);
+
+        view.bind();
+
+        final Scene scene = new Scene(root);
+        stage.setTitle("Bug Tracker");
+        stage.setScene(scene);
+        stage.show();
     }
     
 }

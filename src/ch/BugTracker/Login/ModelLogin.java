@@ -9,6 +9,7 @@ import ch.BugTracker.Database.Commands;
 import ch.BugTracker.Main;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
 
@@ -41,7 +42,7 @@ public class ModelLogin {
         changes.firePropertyChange("check", old, check);
     }
 
-    public void startBugtracker() {
+    public void startBugtracker() throws IOException, SQLException, ClassNotFoundException {
         mainApp.startBugTracker();
     }
 }

@@ -7,6 +7,8 @@ package ch.BugTracker.Login;
 
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.IOException;
+import java.sql.SQLException;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 
@@ -36,7 +38,7 @@ public class ViewModelLogin implements PropertyChangeListener{
         model.checkLogin(email, pass);
     }
 
-    public void startBugTracker() {
+    public void startBugTracker() throws IOException, SQLException, ClassNotFoundException {
         model.startBugtracker();
     }
 }

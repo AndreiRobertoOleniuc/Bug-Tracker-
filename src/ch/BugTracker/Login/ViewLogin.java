@@ -7,6 +7,7 @@ package ch.BugTracker.Login;
 
 import ch.BugTracker.Database.Commands;
 import ch.BugTracker.Main;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
@@ -49,7 +50,7 @@ public class ViewLogin implements Initializable {
     }
 
     @FXML
-    private void login(ActionEvent event) {
+    private void login(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
         String AllowedChars = "[a-zA-Z0-9@.]*";
         boolean invalidChecker = false;
         //Check email for unallowed chars

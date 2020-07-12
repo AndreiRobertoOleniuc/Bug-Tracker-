@@ -54,6 +54,7 @@ public class Commands {
             Date datum = rs2.getDate(4);
             String language = rs2.getString(5);
             allBugs.add(new Bugs(id, name, state, datum, language));
+            System.out.println(datum);
         }
         conn.close();
         jdbc.closeConnection();

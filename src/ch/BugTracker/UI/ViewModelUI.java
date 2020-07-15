@@ -5,8 +5,12 @@
  */
 package ch.BugTracker.UI;
 
+import ch.BugTracker.Database.Bugs;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.util.ArrayList;
+import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.StringProperty;
 
 /**
  *
@@ -14,14 +18,18 @@ import java.beans.PropertyChangeListener;
  */
 public class ViewModelUI implements PropertyChangeListener{
     private ModelUI model;
-
+    private ArrayList<Bugs> bugs;
     public ViewModelUI(ModelUI model) {
         this.model = model;
     }
-    
+
     @Override
     public void propertyChange(PropertyChangeEvent pce) {
-        
+        switch(pce.getPropertyName()){
+            default:
+                System.out.println("Nichts");
+                break;
+        }
     }
     
 }

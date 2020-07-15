@@ -5,11 +5,15 @@
  */
 package ch.BugTracker.UI;
 
+import ch.BugTracker.Database.Administration;
 import ch.BugTracker.Database.Commands;
+import ch.BugTracker.Database.Users;
+import ch.BugTracker.Database.Bugs;
 import ch.BugTracker.Main;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 /**
  *
@@ -19,8 +23,17 @@ public class ModelUI {
     protected final PropertyChangeSupport changes = new PropertyChangeSupport(this);
     private Main mainApp;    
     private Commands sql;
+    private ArrayList<Users> allUser;
+    private ArrayList<Bugs> allBugs;
+    private ArrayList<Administration> allAdmini;
+    private String oldData= "nichts";
+    
     public ModelUI() throws SQLException, ClassNotFoundException {
         sql = new Commands();
+        sql.updateData();
+        allUser = sql.getAllUser();
+        allBugs= sql.getAllBugs();
+        allAdmini = sql.getAllAdmini();
     }
 
     public void setMain(Main mainApp) {
@@ -30,5 +43,4 @@ public class ModelUI {
     public void addPropertyChangeListener(final PropertyChangeListener listener) {
         changes.addPropertyChangeListener(listener);
     }
-    
 }

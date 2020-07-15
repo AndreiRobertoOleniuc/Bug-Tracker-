@@ -1,15 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.CubicCurve?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="ch.BugTracker.Login.ViewLogin">
+<AnchorPane id="AnchorPane" fx:id="panel" prefHeight="623.0" prefWidth="1000.0" styleClass="pane" stylesheets="@../Style/UIStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.BugTracker.Login.ViewLogin">
    <children>
-      <PasswordField fx:id="passTxt" layoutX="213.0" layoutY="215.0" promptText="pass" />
-      <TextField fx:id="emailTxt" layoutX="213.0" layoutY="142.0" promptText="email" />
-      <Button layoutX="274.0" layoutY="280.0" mnemonicParsing="false" onAction="#login" text="Login" />
+      <JFXButton buttonType="RAISED" layoutX="348.0" layoutY="409.0" onAction="#login" prefHeight="40.0" prefWidth="250.0" ripplerFill="WHITE" styleClass="loginBtn" stylesheets="@../Style/UIStyle.css" text="Login" textFill="WHITE" AnchorPane.bottomAnchor="174.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="405.0" AnchorPane.topAnchor="409.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField fx:id="emailTxt" focusColor="#6e32f7" layoutX="350.0" layoutY="236.0" prefHeight="40.0" prefWidth="250.0" styleClass="textField" stylesheets="@../Style/UIStyle.css" unFocusColor="#5370a1" AnchorPane.bottomAnchor="344.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="405.0" AnchorPane.topAnchor="236.0">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font></JFXTextField>
+      <JFXPasswordField fx:id="passTxt" focusColor="#6e32f7" layoutX="349.0" layoutY="328.0" prefHeight="40.0" prefWidth="250.0" styleClass="textField" stylesheets="@../Style/UIStyle.css" unFocusColor="#5370a1" AnchorPane.bottomAnchor="255.0" AnchorPane.leftAnchor="350.0" AnchorPane.rightAnchor="405.0" AnchorPane.topAnchor="328.0" />
+      <CubicCurve controlX1="-94.10519409179688" controlX2="-7.1192169189453125" controlY1="-227.12844848632812" controlY2="-39.747520446777344" endX="266.88079833984375" endY="-7.62939453125E-6" fill="#241b6c" layoutX="174.0" layoutY="582.0" startX="-150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      <CubicCurve controlX1="108.88163757324219" controlX2="150.00001525878906" controlY1="-75.18572998046875" controlY2="-372.21368408203125" endX="150.0" fill="#241b6c" layoutX="782.0" layoutY="489.0" startX="-150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <CubicCurve controlX1="-113.0" controlX2="-113.0" controlY1="-226.75314331054688" controlY2="-28.539382934570312" endX="150.0" fill="#301e78" layoutX="350.0" layoutY="479.0" startX="-229.0" AnchorPane.bottomAnchor="0.0" />
+      <CubicCurve controlX1="44.0" controlX2="-28.0" controlY1="-236.643798828125" controlY2="-43.537071228027344" endX="150.0" fill="#301e78" layoutX="805.0" layoutY="621.0" startX="-229.0" AnchorPane.bottomAnchor="0.0" />
+      <CubicCurve controlX1="-150.0" controlX2="-101.0" controlY1="-54.66356658935547" controlY2="-119.08673095703125" endX="240.0" endY="-0.426116943359375" fill="#241b6c" layoutX="481.0" layoutY="598.0" startX="-272.5595703125" startY="-0.32627105712890625" AnchorPane.bottomAnchor="0.0" />
+      <CubicCurve controlX1="34.0" controlX2="249.0" controlY1="188.23362731933594" controlY2="234.3262176513672" endX="316.0" endY="326.7547302246094" fill="#241b6c" layoutX="491.0" layoutY="608.0" startX="-18.0" startY="326.6240234375" AnchorPane.bottomAnchor="0.0" />
+      <Label layoutX="350.0" layoutY="198.0" text="Email" textFill="#5370a1">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="301.0" text="Password" textFill="#5370a1">
+         <font>
+            <Font name="Open Sans" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="349.0" layoutY="81.0" text="Bug Tracker " textFill="WHITE">
+         <font>
+            <Font name="Open Sans Semibold" size="37.0" />
+         </font>
+      </Label>
+      <Label layoutX="348.0" layoutY="149.0" text=" Login or Sign on :)" textFill="#5370a1">
+         <font>
+            <Font name="Open Sans" size="13.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" layoutX="881.0" layoutY="20.0" onAction="#signUp" ripplerFill="#859ec6" text="Sign Up" textFill="#5370a1" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Icons/pfeil.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
    </children>
 </AnchorPane>

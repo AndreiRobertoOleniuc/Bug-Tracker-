@@ -8,14 +8,14 @@ and open the template in the editor.
     Author     : Andrei Oleniuc
 */
 
-.background{
-    -fx-background-color: grey;
+.pane{
+    -fx-background-color: linear-gradient(to top,#031249,#0a1f6e);
 }
-.buttons{
-    -fx-background-color: white;
-    -fx-border-radius: 20;
-    -fx-border-color: white;
+.textField{
+    -fx-background-color: #142455;
+    -fx-text-inner-color: #5b7cb3;
 }
-.table{
-    
+
+.loginBtn{
+    -fx-background-color: linear-gradient(to right,#3721ba,#6e32f7);
 }

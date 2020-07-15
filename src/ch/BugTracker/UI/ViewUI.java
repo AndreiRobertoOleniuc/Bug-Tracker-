@@ -86,6 +86,7 @@ public class ViewUI implements Initializable {
         datum.setCellValueFactory(new PropertyValueFactory<>("datum"));
         TableColumn<Bugs, String> proL = new TableColumn<>("ProgrammingLanguage");
         proL.setMinWidth(250);
+        proL.getStyleClass().add("-fx-background-color: white");
         proL.setCellValueFactory(new PropertyValueFactory<>("programmingL"));
 //            TableColumn<Bugs, String> assignment = new TableColumn<>("assignment");
 //            assignment.setMinWidth(150);

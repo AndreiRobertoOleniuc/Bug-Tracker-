@@ -5,6 +5,6 @@
 
 <AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1200.0" styleClass="background" stylesheets="@../Style/UIStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.BugTracker.UI.ViewUI">
    <children>
-      <TableView fx:id="tabelle" layoutX="231.0" layoutY="238.0" prefHeight="500.0" prefWidth="750.0" />
+      <TableView fx:id="tabelle" layoutX="266.0" layoutY="151.0" prefHeight="500.0" prefWidth="750.0" />
    </children>
 </AnchorPane>

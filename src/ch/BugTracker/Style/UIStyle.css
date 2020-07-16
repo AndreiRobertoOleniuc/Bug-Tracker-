@@ -19,3 +19,21 @@ and open the template in the editor.
 .loginBtn{
     -fx-background-color: linear-gradient(to right,#3721ba,#6e32f7);
 }
+.tabelle{
+    -fx-background-color: white;
+    -fx-text-inner-color: #5b7cb3;
+}
+
+.name{
+    -fx-background-color: grey;
+    -fx-text-fill: red;
+}
+.sideBar{
+    -fx-background-color:#301e78;
+}
+.logo{
+    -fx-background-color:#211454;
+}
+.backgroundUI{
+   -fx-background-color: linear-gradient(to top,#031249,#0a1f6e);
+}

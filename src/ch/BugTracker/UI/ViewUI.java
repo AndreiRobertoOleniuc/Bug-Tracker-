@@ -47,7 +47,15 @@ public class ViewUI implements Initializable {
     private ArrayList<String> assignment = new ArrayList<>();
     private ObservableList<Bugs> data = FXCollections.observableArrayList();
     @FXML
-    private TableView<Bugs> tabelle;
+    private TableView<Bugs> table2;
+    @FXML
+    private TableColumn<Bugs, String> nCL;
+    @FXML
+    private TableColumn<Bugs, Date> dCL;
+    @FXML
+    private TableColumn<Bugs, String> prLCL;
+    @FXML
+    private TableColumn<Bugs, String> stCL;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -58,7 +66,10 @@ public class ViewUI implements Initializable {
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ViewUI.class.getName()).log(Level.SEVERE, null, ex);
         }
-        createTable();
+        nCL.setCellValueFactory(new PropertyValueFactory<>("name"));
+        dCL.setCellValueFactory(new PropertyValueFactory<>("datum"));
+        prLCL.setCellValueFactory(new PropertyValueFactory<>("programmingL"));
+        stCL.setCellValueFactory(new PropertyValueFactory<>("status"));
         data();
     }
 
@@ -72,26 +83,6 @@ public class ViewUI implements Initializable {
 
     private void updateData() throws SQLException, ClassNotFoundException {
         sql.updateData();
-    }
-
-    private void createTable() {
-        TableColumn<Bugs, String> name = new TableColumn<>("Name");
-        name.setMinWidth(150);
-        name.setCellValueFactory(new PropertyValueFactory<>("name"));
-        TableColumn<Bugs, String> status = new TableColumn<>("Status");
-        status.setMinWidth(150);
-        status.setCellValueFactory(new PropertyValueFactory<>("status"));
-        TableColumn<Bugs, Date> datum = new TableColumn<>("Datum");
-        datum.setMinWidth(150);
-        datum.setCellValueFactory(new PropertyValueFactory<>("datum"));
-        TableColumn<Bugs, String> proL = new TableColumn<>("ProgrammingLanguage");
-        proL.setMinWidth(250);
-        proL.getStyleClass().add("-fx-background-color: white");
-        proL.setCellValueFactory(new PropertyValueFactory<>("programmingL"));
-//            TableColumn<Bugs, String> assignment = new TableColumn<>("assignment");
-//            assignment.setMinWidth(150);
-//            assignment.setCellValueFactory(new PropertyValueFactory<>("Assignment"));
-        tabelle.getColumns().addAll(name, status, datum, proL);
     }
 
     private void data() {
@@ -126,6 +117,6 @@ public class ViewUI implements Initializable {
             assig += ", ";
             data.add(sql.getAllBugs().get(i));
         }
-        tabelle.setItems(data);
+        table2.setItems(data);
     }
 }

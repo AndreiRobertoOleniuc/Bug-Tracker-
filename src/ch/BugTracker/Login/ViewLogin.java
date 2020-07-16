@@ -46,7 +46,6 @@ public class ViewLogin implements Initializable {
     private Stage stage;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
     }
 
     public void bind() {
@@ -101,17 +100,18 @@ public class ViewLogin implements Initializable {
     private void signUp(ActionEvent event) {
         
     }
-    
-    private void makeDrag(){
-        panel.setOnMousePressed(((event)->{
-            x = event.getSceneX();
-            y = event.getSceneY();
-        }));
-        
-        panel.setOnMouseDragged(((event)->{
-            stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setX(event.getSceneX() -x);
-            stage.setY(event.getSceneY()- y);
-        }));
+
+    @FXML
+    private void minimize(ActionEvent event) {
     }
+
+    @FXML
+    private void close(ActionEvent event) throws InterruptedException {
+        System.exit(0);
+    }
+
+    @FXML
+    private void forogtPassword(ActionEvent event) {
+    }
+    
 }

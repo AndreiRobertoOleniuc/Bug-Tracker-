@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="026030cf-8ddc-4a0c-8b0b-ae9dc1d647a5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/ch/BugTracker/Database/Commands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/BugTracker/Database/Commands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/BugTracker/UI/ModelUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/BugTracker/UI/ModelUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/BugTracker/UI/ViewModelUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/BugTracker/UI/ViewModelUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/BugTracker/UI/ViewUI.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/BugTracker/UI/ViewUI.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ch/BugTracker/UI/ViewUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/BugTracker/UI/ViewUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ch/BugTracker/Style/UITable.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ch/BugTracker/Style/UITable.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +21,9 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -38,5 +37,11 @@
       <updated>1594752256511</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="277" y="69" key="SettingsEditor" timestamp="1595756095749">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="277" y="69" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1595756095749" />
   </component>
 </project>

@@ -69,9 +69,6 @@ public class Main extends Application {
         stage.show();
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         launch(args);
     }
@@ -109,5 +106,49 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
+    public void startLogin() throws IOException, SQLException, ClassNotFoundException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Login/ViewLogin.fxml"));
+        Parent root;
+        root = loader.load();
+
+        root.setOnMousePressed(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                xOffset = event.getSceneX();
+                yOffset = event.getSceneY();
+            }
+        });
+        root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                stage.setX(event.getScreenX() - xOffset);
+                stage.setY(event.getScreenY() - yOffset);
+            }
+        });
+        
+        ViewLogin view = loader.getController();
+        ModelLogin model = new ModelLogin();
+        model.setMainApp(this);
+        final ViewModelLogin viewModel = new ViewModelLogin(model);
+        view.setVm(viewModel);
+        model.addPropertyChangeListener(viewModel);
+
+        view.bind();
+
+        final Scene scene = new Scene(root);
+        stage.setTitle("Login");
+        stage.setScene(scene);
+        stage.show();
+    }
     
+    public void startAdd()throws IOException, SQLException, ClassNotFoundException{
+        
+    }
+    public void startManageBugs()throws IOException, SQLException, ClassNotFoundException{
+        
+    }
+    public void startManageWorker()throws IOException, SQLException, ClassNotFoundException{
+        
+    }
 }

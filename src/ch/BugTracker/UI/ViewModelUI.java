@@ -8,6 +8,8 @@ package ch.BugTracker.UI;
 import ch.BugTracker.Database.Bugs;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
@@ -30,6 +32,10 @@ public class ViewModelUI implements PropertyChangeListener{
                 System.out.println("Nichts");
                 break;
         }
+    }
+
+    public void signOut() throws IOException, SQLException, ClassNotFoundException {
+        model.signOut();
     }
     
 }

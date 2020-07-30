@@ -9,6 +9,7 @@ import ch.BugTracker.Database.Administration;
 import ch.BugTracker.Database.Commands;
 import ch.BugTracker.Database.Users;
 import ch.BugTracker.Database.Bugs;
+import com.jfoenix.controls.JFXButton;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Date;
@@ -56,6 +57,16 @@ public class ViewUI implements Initializable {
     private TableColumn<Bugs, String> prLCL;
     @FXML
     private TableColumn<Bugs, String> stCL;
+    @FXML
+    private JFXButton homeBtn;
+    @FXML
+    private JFXButton addBugBtn;
+    @FXML
+    private JFXButton manageBugsBtn;
+    @FXML
+    private JFXButton manageWorkerBtn;
+    @FXML
+    private JFXButton signBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -118,5 +129,42 @@ public class ViewUI implements Initializable {
             data.add(sql.getAllBugs().get(i));
         }
         table2.setItems(data);
+    }
+    @FXML
+    private void add(ActionEvent event) {
+    }
+
+    @FXML
+    private void sort(ActionEvent event) {
+    }
+
+    @FXML
+    private void home(ActionEvent event) {
+    }
+
+    @FXML
+    private void addBug(ActionEvent event) {
+    }
+
+    @FXML
+    private void manageBugs(ActionEvent event) {
+    }
+
+    @FXML
+    private void manageWorker(ActionEvent event) {
+    }
+
+    @FXML
+    private void signOut(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
+        vm.signOut();
+    }
+    
+    @FXML
+    private void close(ActionEvent event) {
+        System.exit(0);
+    }
+
+    @FXML
+    private void minimize(ActionEvent event) {
     }
 }

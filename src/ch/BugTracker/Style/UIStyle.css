@@ -37,3 +37,6 @@ and open the template in the editor.
 .backgroundUI{
    -fx-background-color: linear-gradient(to top,#031249,#0a1f6e);
 }
+.btn{
+    -fx-background-color: #301e78;
+}

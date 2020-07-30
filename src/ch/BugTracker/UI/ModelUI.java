@@ -12,6 +12,7 @@ import ch.BugTracker.Database.Bugs;
 import ch.BugTracker.Main;
 import java.beans.PropertyChangeListener;
 import java.beans.PropertyChangeSupport;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
@@ -42,5 +43,9 @@ public class ModelUI {
     
     public void addPropertyChangeListener(final PropertyChangeListener listener) {
         changes.addPropertyChangeListener(listener);
+    }
+
+    public void signOut()throws IOException, SQLException, ClassNotFoundException {
+        mainApp.startLogin();
     }
 }

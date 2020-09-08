@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.image.Image?>
@@ -10,30 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.CubicCurve?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1500.0" styleClass="backgroundUI" stylesheets="@../Style/UIStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.BugTracker.UI.ViewUI">
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1600.0" styleClass="backgroundUI" stylesheets="@../Style/UIStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.BugTracker.UI.ViewUI">
    <children>
-      <VBox layoutY="7.0" prefHeight="900.0" prefWidth="422.0" styleClass="sideBar" stylesheets="@../Style/UIStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1078.0" AnchorPane.topAnchor="0.0">
+      <VBox layoutY="74.0" prefHeight="1006.0" prefWidth="96.0" styleClass="sideBar" stylesheets="@../Style/UIStyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="74.0">
          <children>
-            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="218.0" prefWidth="422.0" styleClass="logo" stylesheets="@../Style/UIStyle.css">
-               <children>
-                  <Label graphicTextGap="12.0" text="Bug Tracker" textFill="WHITE">
-                     <font>
-                        <Font size="45.0" />
-                     </font>
-                     <graphic>
-                        <ImageView fitHeight="69.0" fitWidth="61.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../Images/Icons/insekt.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Label>
-               </children>
-            </HBox>
-            <JFXButton fx:id="homeBtn" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="20.0" onAction="#home" prefHeight="90.0" prefWidth="428.0" text="Home" textFill="WHITE">
+            <JFXButton fx:id="homeBtn" alignment="BASELINE_LEFT" buttonType="RAISED" contentDisplay="TOP" graphicTextGap="5.0" onAction="#home" prefHeight="90.0" prefWidth="428.0" text="Home" textFill="WHITE">
                <graphic>
                   <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -44,81 +25,15 @@
                <font>
                   <Font size="23.0" />
                </font>
-               <padding>
-                  <Insets left="130.0" />
-               </padding>
-            </JFXButton>
-            <JFXButton fx:id="addBugBtn" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="20.0" onAction="#addBug" prefHeight="90.0" prefWidth="428.0" text="Add Bug" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/Icons/icons8_Slider__32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="23.0" />
-               </font>
-               <padding>
-                  <Insets left="130.0" />
-               </padding>
-            </JFXButton>
-            <JFXButton fx:id="manageBugsBtn" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="20.0" onAction="#manageBugs" prefHeight="90.0" prefWidth="428.0" text="Manage Bugs" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/Icons/icons8_Box_32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="23.0" />
-               </font>
-               <padding>
-                  <Insets left="130.0" />
-               </padding>
-            </JFXButton>
-            <JFXButton fx:id="manageWorkerBtn" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="20.0" onAction="#manageWorker" prefHeight="90.0" prefWidth="428.0" text="Manage Worker" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/Icons/icons8_Person_32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="23.0" />
-               </font>
-               <padding>
-                  <Insets left="130.0" />
-               </padding>
-            </JFXButton>
-            <JFXButton fx:id="signBtn" alignment="BASELINE_LEFT" buttonType="RAISED" graphicTextGap="20.0" onAction="#signOut" prefHeight="90.0" prefWidth="428.0" text="Sign Out" textFill="WHITE">
-               <graphic>
-                  <ImageView fitHeight="32.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../Images/Icons/icons8_Sign_Out_32px.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <font>
-                  <Font size="23.0" />
-               </font>
-               <padding>
-                  <Insets left="130.0" />
-               </padding>
             </JFXButton>
          </children></VBox>
-      <CubicCurve controlX1="-528.5716552734375" controlX2="84.53193664550781" controlY1="89.0" controlY2="64.0" endX="54.39935302734375" endY="-293.0" fill="#241b6c" layoutX="1420.0" layoutY="782.0" opacity="0.5" startX="54.0" startY="118.0" AnchorPane.rightAnchor="0.0" />
-      <CubicCurve controlX1="-257.0" controlX2="-4.0" controlY1="104.0" controlY2="75.0" endX="54.39935302734375" endY="-293.0" fill="#241b6c" layoutX="1443.0" layoutY="566.0" opacity="0.5" startX="54.3992919921875" startY="254.0" AnchorPane.rightAnchor="0.0" />
-      <CubicCurve controlX1="21.0" controlX2="-292.0" controlY1="116.0" controlY2="-159.0" endX="54.3992919921875" endY="-200.0" fill="#231a72" layoutX="1453.0" layoutY="349.0" opacity="0.5" startX="54.3992919921875" startY="254.0" AnchorPane.rightAnchor="0.0" />
-      <CubicCurve controlX1="-3.0" controlX2="-446.0" controlY1="-94.38253784179688" controlY2="-319.0" endX="54.3992919921875" endY="-200.0" fill="#251b86" layoutX="1462.0" layoutY="200.0" opacity="0.5" startX="54.3992919921875" startY="254.0" AnchorPane.rightAnchor="0.0" />
-      <TableView fx:id="table2" layoutX="500.0" layoutY="73.0" prefHeight="682.0" prefWidth="902.0" styleClass="tableView" stylesheets="@../Style/UITable.css">
+      <HBox layoutX="7.0" layoutY="5.0" prefHeight="74.0" prefWidth="1600.0" styleClass="topBar" stylesheets="@../Style/UIStyle.css" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <TableView fx:id="table2" layoutX="136.0" layoutY="113.0" prefHeight="818.0" prefWidth="1607.0" styleClass="tableView" stylesheets="@../Style/UITable.css" AnchorPane.bottomAnchor="149.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="177.0" AnchorPane.topAnchor="113.0">
         <columns>
-          <TableColumn fx:id="nCL" prefWidth="222.0" text="Name" />
-          <TableColumn fx:id="dCL" prefWidth="167.0" text="Date" />
-            <TableColumn fx:id="prLCL" prefWidth="243.0" text="Language" />
-            <TableColumn fx:id="stCL" prefWidth="268.0" text="Status" />
+          <TableColumn fx:id="nCL" prefWidth="300.0" text="Name" />
+          <TableColumn fx:id="dCL" prefWidth="300.0" text="Date" />
+            <TableColumn fx:id="prLCL" prefWidth="300.0" text="Language" />
+            <TableColumn fx:id="stCL" prefWidth="385.0" text="Status" />
         </columns>
       </TableView>
       <JFXButton buttonType="RAISED" layoutX="24.0" layoutY="30.0" onAction="#close" prefHeight="20.0" prefWidth="20.0" ripplerFill="WHITE" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
@@ -139,7 +54,16 @@
             </ImageView>
          </graphic>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="500.0" layoutY="782.0" onAction="#add" prefHeight="58.0" prefWidth="445.0" ripplerFill="BLACK" styleClass="btn" stylesheets="@../Style/UIStyle.css" text="Add" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="87.0" layoutY="40.0" onAction="#maximize" prefHeight="20.0" prefWidth="20.0" ripplerFill="WHITE" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="5.0">
+         <graphic>
+            <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Icons/erweitern.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="136.0" layoutY="959.0" onAction="#add" prefHeight="58.0" prefWidth="445.0" ripplerFill="BLACK" styleClass="btnBlue" stylesheets="@../Style/UIStyle.css" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="56.0" AnchorPane.leftAnchor="136.0">
          <graphic>
             <ImageView fitHeight="54.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -151,7 +75,7 @@
             <Font name="System Bold" size="30.0" />
          </font>
       </JFXButton>
-      <JFXButton buttonType="RAISED" layoutX="961.0" layoutY="782.0" onAction="#sort" prefHeight="58.0" prefWidth="445.0" ripplerFill="BLACK" styleClass="btn" stylesheets="@../Style/UIStyle.css" text="Sort" textFill="WHITE">
+      <JFXButton buttonType="RAISED" layoutX="1296.0" layoutY="959.0" onAction="#sort" prefHeight="58.0" prefWidth="445.0" ripplerFill="BLACK" styleClass="btnBlue" stylesheets="@../Style/UIStyle.css" text="Sort" textFill="WHITE" AnchorPane.bottomAnchor="56.0" AnchorPane.rightAnchor="179.0">
          <graphic>
             <ImageView fitHeight="54.0" fitWidth="31.0" pickOnBounds="true" preserveRatio="true">
                <image>

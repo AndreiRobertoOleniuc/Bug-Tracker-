@@ -64,7 +64,7 @@ public class Main extends Application {
         final Scene scene = new Scene(root);
         this.stage = stage;
         stage.setTitle("Login");
-        stage.initStyle(StageStyle.TRANSPARENT);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
         stage.show();
     }
@@ -133,7 +133,6 @@ public class Main extends Application {
         final ViewModelLogin viewModel = new ViewModelLogin(model);
         view.setVm(viewModel);
         model.addPropertyChangeListener(viewModel);
-
         view.bind();
 
         final Scene scene = new Scene(root);
@@ -141,14 +140,15 @@ public class Main extends Application {
         stage.setScene(scene);
         stage.show();
     }
-    
-    public void startAdd()throws IOException, SQLException, ClassNotFoundException{
-        
+
+    public void setToMin()throws IOException, SQLException, ClassNotFoundException{
+        stage.setIconified(true);
     }
-    public void startManageBugs()throws IOException, SQLException, ClassNotFoundException{
-        
-    }
-    public void startManageWorker()throws IOException, SQLException, ClassNotFoundException{
-        
+    public void setToMax()throws IOException, SQLException, ClassNotFoundException{
+        if(stage.isMaximized()){
+            stage.setMaximized(false);
+        }else {
+            stage.setMaximized(true);
+        }
     }
 }

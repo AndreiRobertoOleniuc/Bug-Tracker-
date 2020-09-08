@@ -48,4 +48,11 @@ public class ModelUI {
     public void signOut()throws IOException, SQLException, ClassNotFoundException {
         mainApp.startLogin();
     }
+
+    public void max() throws IOException, SQLException, ClassNotFoundException {
+        mainApp.setToMax();
+    }    
+    public void min() throws IOException, SQLException, ClassNotFoundException {
+        mainApp.setToMin();
+    }
 }

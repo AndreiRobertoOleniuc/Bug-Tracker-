@@ -37,5 +37,12 @@ public class ViewModelUI implements PropertyChangeListener{
     public void signOut() throws IOException, SQLException, ClassNotFoundException {
         model.signOut();
     }
+
+    public void max() throws IOException, SQLException, ClassNotFoundException  {
+        model.max();
+    }
+    public void min() throws IOException, SQLException, ClassNotFoundException  {
+        model.min();
+    }
     
 }

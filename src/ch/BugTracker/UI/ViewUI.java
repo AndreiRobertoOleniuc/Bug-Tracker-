@@ -59,14 +59,6 @@ public class ViewUI implements Initializable {
     private TableColumn<Bugs, String> stCL;
     @FXML
     private JFXButton homeBtn;
-    @FXML
-    private JFXButton addBugBtn;
-    @FXML
-    private JFXButton manageBugsBtn;
-    @FXML
-    private JFXButton manageWorkerBtn;
-    @FXML
-    private JFXButton signBtn;
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -142,19 +134,7 @@ public class ViewUI implements Initializable {
     private void home(ActionEvent event) {
     }
 
-    @FXML
-    private void addBug(ActionEvent event) {
-    }
 
-    @FXML
-    private void manageBugs(ActionEvent event) {
-    }
-
-    @FXML
-    private void manageWorker(ActionEvent event) {
-    }
-
-    @FXML
     private void signOut(ActionEvent event) throws IOException, SQLException, ClassNotFoundException {
         vm.signOut();
     }
@@ -165,6 +145,12 @@ public class ViewUI implements Initializable {
     }
 
     @FXML
-    private void minimize(ActionEvent event) {
+    private void minimize(ActionEvent event) throws IOException, SQLException, ClassNotFoundException{
+        vm.min();
+    }
+    
+    @FXML
+    private void maximize(ActionEvent event) throws IOException, SQLException, ClassNotFoundException{
+        vm.max();
     }
 }

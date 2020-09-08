@@ -9,14 +9,14 @@ and open the template in the editor.
 */
 
 .table-view{
-    -fx-background-color: #0a1f6e;
+    -fx-background-color: white;
 }
 .table-view .column-header,
 .table-view .column-header-background .filler {
-    -fx-background-color:  #301e78; 
+    -fx-background-color:  white; 
 }
 .table-view .column-header .label{
-   -fx-text-fill: white;
+   -fx-text-fill: #4f8dd7;
    -fx-font-weight: bold; 
    -fx-font-size:25px; 
    -fx-alignment: CENTER_LEFT;
